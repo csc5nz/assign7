@@ -26,6 +26,8 @@ Time spent: **23** hours spent in total
     - Tested in version: 2.5.0-4.7.4
     - Fixed in version: 4.2.15
   - [ ] GIF Walkthrough: 
+    ![](https://i.imgur.com/GjoJS3H.gifv) or <img src="https://i.imgur.com/GjoJS3H.gifv" width="800">
+  [https://i.imgur.com/GjoJS3H.gifv](https://i.imgur.com/GjoJS3H.gifv)
   - [ ] Steps to recreate: The WordPress installation must not be able to write to the wp_content folder. The attacker is able to make admin change the hostname and password by creating a page which sends a post comand with a new hostname and password. Some social engineering is required since the admin must click the submit button in this from. I created a html page with a form whose action is the wpdestilleries plugins.php: "http://wpdistillery.vm/wp-admin/plugins.php". It contains hiddent input tags with my chosen username and password as default values. It also contains a submit button which the admin must be tricked into cliking while he/she is loged in as admin on wp. I tested the code and the malicious page runs and redirects to the wp admin's plug in page. I'm unable to check if the hostname and password were changed. I did extensive research to see how to find this out but was unable to find it.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
@@ -35,6 +37,8 @@ Time spent: **23** hours spent in total
     - Tested in version: 4.2
     - Fixed in version: 4.2.13
   - [ ] GIF Walkthrough: 
+    ![](https://i.imgur.com/GjoJS3H.gifv) or <img src="https://i.imgur.com/GjoJS3H.gifv" width="800">
+  [https://i.imgur.com/GjoJS3H.gifv](https://i.imgur.com/GjoJS3H.gifv)
   - [ ] Steps to recreate: Upload mp3 file with script in its mettadata. Create media playlist. Post playlist on page. This must be done as admin.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
