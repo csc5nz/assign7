@@ -11,7 +11,8 @@ Time spent: **23** hours spent in total
     - Vulnerability types: Cross-Site Scripting (XSS)
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
-  - [ ] GIF Walkthrough: ![](https://i.imgur.com/GjoJS3H.gifv) 
+  - [ ] GIF Walkthrough: ![](https://i.imgur.com/GjoJS3H.gifv) or <img src="https://i.imgur.com/GjoJS3H.gifv" width="800">
+
   - [ ] Steps to recreate: Attacker as a regular user must post a comment with a script. The comment must be truncated by the database for the exploit to work. Once the comment is posted, the victim as an admin user must check comments and hover the mouse over the malicious comment and the script will run. I try using the recommended comment from the exploits page: <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>. I added enough text to make the database truncate the comment. But the exploit didn't work. I tried multiple changes such as types of quotations, placement of brackets, differnt scripts, different triggers, etc. I noticed that if I cliked on edit comment as admin, the comment was not getting truncated. I tried making a longer comment but this didn't work either. It seems that this version of sql is not truncating the comment and thus the exploit is not working since the exploit was tested on MySQL versions 5.1.53 and 5.5.41.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/trunk/src/wp-admin/comment.php)
